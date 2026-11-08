@@ -15,7 +15,8 @@ namespace DLD.Play
             var tex = Chinese || !en ? zh : en;
             var r = GetComponent<MeshRenderer>(); var mpb = new MaterialPropertyBlock();
             r.GetPropertyBlock(mpb); mpb.SetTexture(Map, tex); r.SetPropertyBlock(mpb);
-            float w = size.x > 0 ? size.x : tex.width * MetersPerPixel * scale, h = size.y > 0 ? size.y : tex.height * MetersPerPixel * scale;
+            var px = UITexSizes.Of(tex);      // 原始像素尺寸（贴图导入时被放大到 2 的幂次了）
+            float w = size.x > 0 ? size.x : px.x * MetersPerPixel * scale, h = size.y > 0 ? size.y : px.y * MetersPerPixel * scale;
             if (fit.x > 0) { float k = Mathf.Min(1, fit.x / w, fit.y / h); w *= k; h *= k; }      // 字放不下就整体缩小，比例不变，四周留白不变
             transform.localScale = new Vector3(w, h, 1);
             var item = GetComponent<UIItem>();

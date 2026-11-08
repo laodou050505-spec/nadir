@@ -1,0 +1,444 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51bede2674b7e4fe4a057b9b7b43560d, type: 3}
+  m_Name: UITexSizes
+  m_EditorClassIdentifier: Assembly-CSharp::DLD.Play.UITexSizes
+  names:
+  - area0_en
+  - area0_zh
+  - area1_en
+  - area1_zh
+  - area2_en
+  - area2_zh
+  - area3_en
+  - area3_zh
+  - arrow
+  - b_back_en
+  - b_back_zh
+  - b_bound_en
+  - b_bound_zh
+  - b_enter_en
+  - b_enter_zh
+  - b_lesson_en
+  - b_lesson_zh
+  - b_pause_en
+  - b_pause_zh
+  - b_quit_en
+  - b_quit_zh
+  - b_resume_en
+  - b_resume_zh
+  - b_title_en
+  - b_title_zh
+  - begin_en
+  - begin_zh
+  - c_area_en
+  - c_area_zh
+  - c_bound_en
+  - c_bound_zh
+  - c_hands_en
+  - c_hands_zh
+  - c_m0_en
+  - c_m0_zh
+  - c_m1_en
+  - c_m1_zh
+  - c_m2_en
+  - c_m2_zh
+  - c_nofit_en
+  - c_nofit_zh
+  - c_sit_en
+  - c_sit_zh
+  - c_small_en
+  - c_small_zh
+  - cover_en
+  - cover_zh
+  - end_l1_en
+  - end_l1_zh
+  - end_l2_en
+  - end_l2_zh
+  - f_area0
+  - f_area1
+  - f_area2
+  - f_btn0
+  - f_btn1
+  - f_btn2
+  - f_floor0
+  - f_floor1
+  - f_floor2
+  - f_go0
+  - f_mode0
+  - f_mode1
+  - f_mode2
+  - f_sheet
+  - f_start0
+  - floor1_en
+  - floor1_zh
+  - floor10_en
+  - floor10_zh
+  - floor11_en
+  - floor11_zh
+  - floor12_en
+  - floor12_zh
+  - floor2_en
+  - floor2_zh
+  - floor3_en
+  - floor3_zh
+  - floor4_en
+  - floor4_zh
+  - floor5_en
+  - floor5_zh
+  - floor6_en
+  - floor6_zh
+  - floor7_en
+  - floor7_zh
+  - floor8_en
+  - floor8_zh
+  - floor9_en
+  - floor9_zh
+  - goal_done_en
+  - goal_done_zh
+  - goal_n1_en
+  - goal_n1_zh
+  - goal_n10_en
+  - goal_n10_zh
+  - goal_n11_en
+  - goal_n11_zh
+  - goal_n12_en
+  - goal_n12_zh
+  - goal_n2_en
+  - goal_n2_zh
+  - goal_n3_en
+  - goal_n3_zh
+  - goal_n4_en
+  - goal_n4_zh
+  - goal_n5_en
+  - goal_n5_zh
+  - goal_n6_en
+  - goal_n6_zh
+  - goal_n7_en
+  - goal_n7_zh
+  - goal_n8_en
+  - goal_n8_zh
+  - goal_n9_en
+  - goal_n9_zh
+  - ic_h_eye
+  - ic_h_gaze
+  - ic_h_move
+  - ic_h_over
+  - ic_h_push
+  - ic_h_step
+  - ic_h_swat
+  - ic_h_tear
+  - ic_s_dizzy
+  - ic_s_space
+  - ic_s_warn
+  - l_area_en
+  - l_area_zh
+  - l_floor_en
+  - l_floor_zh
+  - l_mode_en
+  - l_mode_zh
+  - lamp_off
+  - lamp_on
+  - lang_en
+  - lang_zh
+  - line
+  - mk_area
+  - mk_btn
+  - mk_floor
+  - mk_go
+  - mk_mode
+  - mk_start
+  - mode0_en
+  - mode0_zh
+  - mode1_en
+  - mode1_zh
+  - mode2_en
+  - mode2_zh
+  - n1
+  - n10
+  - n11
+  - n12
+  - n2
+  - n3
+  - n4
+  - n5
+  - n6
+  - n7
+  - n8
+  - n9
+  - pause_title_en
+  - pause_title_zh
+  - pip0
+  - pip1
+  - pip2
+  - pip3
+  - ring
+  - s_go_en
+  - s_go_zh
+  - s_r0_en
+  - s_r0_zh
+  - s_r1_en
+  - s_r1_zh
+  - s_r2_en
+  - s_r2_zh
+  - s_r3_en
+  - s_r3_zh
+  - s_title_en
+  - s_title_zh
+  - sub_en
+  - sub_zh
+  - tip_goal1_en
+  - tip_goal1_zh
+  - tip_goal2_en
+  - tip_goal2_zh
+  - tip_h_enter_en
+  - tip_h_enter_zh
+  - tip_h_eye_en
+  - tip_h_eye_zh
+  - tip_h_gaze_en
+  - tip_h_gaze_zh
+  - tip_h_move_en
+  - tip_h_move_zh
+  - tip_h_over_en
+  - tip_h_over_zh
+  - tip_h_push_en
+  - tip_h_push_zh
+  - tip_h_step_en
+  - tip_h_step_zh
+  - tip_h_swat_en
+  - tip_h_swat_zh
+  - tip_h_tear_en
+  - tip_h_tear_zh
+  - tip_h_wrist_en
+  - tip_h_wrist_zh
+  - tip_oob_en
+  - tip_oob_zh
+  - title_en
+  - title_tex_en
+  - title_tex_zh
+  - title_zh
+  - veil
+  px:
+  - {x: 311, y: 122}
+  - {x: 276, y: 140}
+  - {x: 229, y: 125}
+  - {x: 205, y: 140}
+  - {x: 348, y: 133}
+  - {x: 319, y: 140}
+  - {x: 232, y: 121}
+  - {x: 205, y: 140}
+  - {x: 256, y: 192}
+  - {x: 220, y: 150}
+  - {x: 254, y: 133}
+  - {x: 730, y: 150}
+  - {x: 736, y: 138}
+  - {x: 403, y: 156}
+  - {x: 320, y: 147}
+  - {x: 420, y: 154}
+  - {x: 398, y: 126}
+  - {x: 276, y: 148}
+  - {x: 256, y: 144}
+  - {x: 387, y: 157}
+  - {x: 386, y: 125}
+  - {x: 393, y: 125}
+  - {x: 316, y: 158}
+  - {x: 504, y: 134}
+  - {x: 454, y: 136}
+  - {x: 421, y: 191}
+  - {x: 388, y: 195}
+  - {x: 1108, y: 139}
+  - {x: 1080, y: 121}
+  - {x: 1413, y: 141}
+  - {x: 1457, y: 126}
+  - {x: 2020, y: 181}
+  - {x: 1194, y: 159}
+  - {x: 894, y: 135}
+  - {x: 926, y: 121}
+  - {x: 716, y: 137}
+  - {x: 796, y: 121}
+  - {x: 1181, y: 135}
+  - {x: 864, y: 119}
+  - {x: 899, y: 139}
+  - {x: 1014, y: 127}
+  - {x: 1554, y: 170}
+  - {x: 1080, y: 148}
+  - {x: 1999, y: 136}
+  - {x: 1791, y: 121}
+  - {x: 2048, y: 1152}
+  - {x: 2048, y: 1152}
+  - {x: 1221, y: 262}
+  - {x: 935, y: 213}
+  - {x: 1508, y: 171}
+  - {x: 1387, y: 143}
+  - {x: 322, y: 195}
+  - {x: 322, y: 195}
+  - {x: 322, y: 195}
+  - {x: 439, y: 195}
+  - {x: 439, y: 195}
+  - {x: 439, y: 195}
+  - {x: 159, y: 180}
+  - {x: 159, y: 180}
+  - {x: 159, y: 180}
+  - {x: 930, y: 240}
+  - {x: 439, y: 195}
+  - {x: 439, y: 195}
+  - {x: 439, y: 195}
+  - {x: 1860, y: 1320}
+  - {x: 540, y: 240}
+  - {x: 594, y: 241}
+  - {x: 815, y: 281}
+  - {x: 682, y: 244}
+  - {x: 818, y: 281}
+  - {x: 638, y: 241}
+  - {x: 1107, y: 282}
+  - {x: 718, y: 241}
+  - {x: 1105, y: 282}
+  - {x: 673, y: 242}
+  - {x: 817, y: 281}
+  - {x: 654, y: 241}
+  - {x: 809, y: 282}
+  - {x: 658, y: 243}
+  - {x: 812, y: 281}
+  - {x: 661, y: 244}
+  - {x: 810, y: 281}
+  - {x: 640, y: 264}
+  - {x: 817, y: 280}
+  - {x: 642, y: 241}
+  - {x: 815, y: 280}
+  - {x: 636, y: 245}
+  - {x: 814, y: 280}
+  - {x: 634, y: 242}
+  - {x: 818, y: 280}
+  - {x: 1728, y: 191}
+  - {x: 1083, y: 161}
+  - {x: 1775, y: 180}
+  - {x: 1457, y: 161}
+  - {x: 1816, y: 182}
+  - {x: 1491, y: 162}
+  - {x: 1794, y: 181}
+  - {x: 1479, y: 163}
+  - {x: 1831, y: 182}
+  - {x: 1510, y: 161}
+  - {x: 1815, y: 179}
+  - {x: 1489, y: 162}
+  - {x: 1804, y: 180}
+  - {x: 1482, y: 161}
+  - {x: 1806, y: 181}
+  - {x: 1485, y: 162}
+  - {x: 1809, y: 180}
+  - {x: 1481, y: 163}
+  - {x: 1798, y: 181}
+  - {x: 1482, y: 162}
+  - {x: 1801, y: 180}
+  - {x: 1487, y: 161}
+  - {x: 1799, y: 179}
+  - {x: 1485, y: 161}
+  - {x: 1797, y: 181}
+  - {x: 1489, y: 161}
+  - {x: 420, y: 420}
+  - {x: 420, y: 420}
+  - {x: 420, y: 420}
+  - {x: 420, y: 420}
+  - {x: 420, y: 420}
+  - {x: 420, y: 420}
+  - {x: 420, y: 420}
+  - {x: 420, y: 420}
+  - {x: 420, y: 420}
+  - {x: 420, y: 420}
+  - {x: 420, y: 420}
+  - {x: 350, y: 146}
+  - {x: 379, y: 126}
+  - {x: 188, y: 123}
+  - {x: 214, y: 129}
+  - {x: 322, y: 153}
+  - {x: 212, y: 128}
+  - {x: 96, y: 160}
+  - {x: 96, y: 160}
+  - {x: 223, y: 131}
+  - {x: 301, y: 174}
+  - {x: 1024, y: 48}
+  - {x: 322, y: 195}
+  - {x: 439, y: 195}
+  - {x: 159, y: 180}
+  - {x: 930, y: 240}
+  - {x: 439, y: 195}
+  - {x: 540, y: 240}
+  - {x: 256, y: 188}
+  - {x: 277, y: 173}
+  - {x: 348, y: 154}
+  - {x: 291, y: 163}
+  - {x: 252, y: 175}
+  - {x: 277, y: 155}
+  - {x: 74, y: 150}
+  - {x: 127, y: 151}
+  - {x: 99, y: 155}
+  - {x: 152, y: 151}
+  - {x: 127, y: 136}
+  - {x: 115, y: 145}
+  - {x: 117, y: 150}
+  - {x: 116, y: 138}
+  - {x: 103, y: 165}
+  - {x: 109, y: 154}
+  - {x: 102, y: 146}
+  - {x: 101, y: 168}
+  - {x: 521, y: 227}
+  - {x: 635, y: 210}
+  - {x: 420, y: 120}
+  - {x: 420, y: 120}
+  - {x: 420, y: 120}
+  - {x: 420, y: 120}
+  - {x: 512, y: 512}
+  - {x: 986, y: 175}
+  - {x: 916, y: 150}
+  - {x: 1396, y: 165}
+  - {x: 1232, y: 143}
+  - {x: 988, y: 163}
+  - {x: 930, y: 142}
+  - {x: 1140, y: 146}
+  - {x: 1021, y: 148}
+  - {x: 1007, y: 166}
+  - {x: 1016, y: 144}
+  - {x: 1226, y: 264}
+  - {x: 919, y: 226}
+  - {x: 726, y: 180}
+  - {x: 476, y: 140}
+  - {x: 2420, y: 190}
+  - {x: 1537, y: 159}
+  - {x: 2511, y: 191}
+  - {x: 1884, y: 162}
+  - {x: 839, y: 161}
+  - {x: 496, y: 163}
+  - {x: 3040, y: 187}
+  - {x: 2095, y: 166}
+  - {x: 2425, y: 182}
+  - {x: 1646, y: 169}
+  - {x: 581, y: 191}
+  - {x: 836, y: 157}
+  - {x: 639, y: 165}
+  - {x: 608, y: 161}
+  - {x: 1959, y: 188}
+  - {x: 1302, y: 158}
+  - {x: 2540, y: 191}
+  - {x: 1520, y: 159}
+  - {x: 1120, y: 184}
+  - {x: 841, y: 160}
+  - {x: 2198, y: 194}
+  - {x: 1769, y: 162}
+  - {x: 3806, y: 192}
+  - {x: 2688, y: 160}
+  - {x: 1173, y: 178}
+  - {x: 591, y: 158}
+  - {x: 1558, y: 684}
+  - {x: 1558, y: 684}
+  - {x: 1134, y: 836}
+  - {x: 1134, y: 836}
+  - {x: 256, y: 256}

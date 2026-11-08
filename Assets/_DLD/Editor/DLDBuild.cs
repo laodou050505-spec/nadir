@@ -51,6 +51,7 @@ namespace DLD.EditorTools
 
         static void Apply()
         {
+            UISizes.Bake();
             var t = NamedBuildTarget.Android;
             Pico(); Icons();
             PlayerSettings.SplashScreen.show = false;      // 封面启动画面之后不再插 Unity 的 Logo
@@ -98,7 +99,8 @@ namespace DLD.EditorTools
                 var path = Path.GetFullPath($"Builds/NADIR_{DateTime.Now:MMdd_HHmm}.apk");
                 var rep = BuildPipeline.BuildPlayer(new BuildPlayerOptions { scenes = new[] { "Assets/_DLD/Scenes/Main.unity" }, locationPathName = path, target = BuildTarget.Android, targetGroup = BuildTargetGroup.Android, options = BuildOptions.None });
                 var s = rep.summary;
-                msg = $"{s.result} 用时 {s.totalTime.TotalMinutes:0.0} 分钟 大小 {s.totalSize / 1048576f:0.0} MB 错误 {s.totalErrors} → {path}";
+                long bytes = File.Exists(path) ? new FileInfo(path).Length : 0;      // 真实的 APK 文件大小（summary.totalSize 不是安装包大小，会多出好几倍）
+                msg = $"{s.result} 用时 {s.totalTime.TotalMinutes:0.0} 分钟 安装包 {bytes / 1048576f:0.0} MB 错误 {s.totalErrors} → {path}";
             }
             catch (Exception e) { msg = "失败 " + e.Message; }
             File.AppendAllText(Report, DateTime.Now.ToString("HH:mm ") + msg + "\n");

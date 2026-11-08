@@ -156,6 +156,7 @@ namespace DLD.EditorTools
 
         static void BuildUI(GameRoot root, Transform world)
         {
+            UISizes.Bake();      // 先记下界面贴图的原始尺寸，下面摆放文字要用
             var ui = new GameObject("UI").transform; ui.SetParent(world, false);
             var f = ui.gameObject.AddComponent<UIFlow>(); f.root = root; f.sound = root.sound; root.flowUI = f;
             var veilCol = new Color(0, 0, 0, .86f);

@@ -30,7 +30,7 @@ namespace DLD.EditorTools
             if (ti.maxTextureSize > 2048) ti.maxTextureSize = 2048;   // 用户要求：贴图不超过 2K
             ti.mipmapEnabled = true;
             ti.anisoLevel = 6;         // 地面和墙斜着看时不闪
-            if (assetPath.StartsWith("Assets/_DLD/Art/UI")) { ti.wrapMode = TextureWrapMode.Clamp; ti.alphaIsTransparency = true; ti.npotScale = TextureImporterNPOTScale.None; ti.filterMode = FilterMode.Trilinear; ti.mipmapFilter = TextureImporterMipFilter.KaiserFilter; }
+            if (assetPath.StartsWith("Assets/_DLD/Art/UI")) { ti.wrapMode = TextureWrapMode.Clamp; ti.alphaIsTransparency = true; ti.npotScale = TextureImporterNPOTScale.ToLarger;      /* 放大到 2 的幂次：不是 2 的幂次又带 mipmap 的贴图在 Android 上不会被压缩，原始尺寸记在 UITexSizes */ ti.filterMode = FilterMode.Trilinear; ti.mipmapFilter = TextureImporterMipFilter.KaiserFilter; }
             var a = ti.GetPlatformTextureSettings("Android");
             bool ui = assetPath.StartsWith("Assets/_DLD/Art/UI");
             a.overridden = true; a.maxTextureSize = Mathf.Min(2048, ti.maxTextureSize); a.format = ui ? TextureImporterFormat.ASTC_4x4 : TextureImporterFormat.ASTC_6x6;
