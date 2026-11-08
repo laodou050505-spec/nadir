@@ -571,16 +571,17 @@ namespace DLD.Play
                 tipIcon.gameObject.SetActive(q.icon != null);
                 if (q.icon) { tipIconLang.zh = q.icon; tipIconLang.Apply(); }
                 var c0 = root.cam.transform; var f0 = Vector3.ProjectOnPlane(c0.forward, Vector3.up).normalized;
-                hintPos = c0.position + f0 * HintDist + Vector3.up * (hintBig ? .02f : -.2f);
+                hintPos = c0.position + f0 * HintDist + Vector3.up * HintLift;
                 hint.Show();
             }
             if (hintT > 0)
             {
                 hintT -= dt;
-                // 懒跟随：低头看脚下时，提示也跟下来，不会跑到视野外面
-                var c = root.cam.transform; var look = c.forward; float py = Mathf.Clamp(look.y, -.75f, .12f);
+                // 懒跟随：左右跟着头转；上下最多压到水平线下约 15°。玩家几乎一直低头看地砖，
+                // 提示不能跟下去盖在地板上，而是停在视野上方、远处墙面的高度，低头时也还看得到
+                var c = root.cam.transform; var look = c.forward; float py = Mathf.Clamp(look.y, -.26f, .1f);
                 var f = new Vector3(look.x, 0, look.z); f = f.sqrMagnitude > .01f ? f.normalized * Mathf.Sqrt(1 - py * py) : c.up * -1; f.y = py;
-                var want = c.position + f * HintDist + Vector3.up * (hintBig ? .02f : root.game?.tut?.Target != null ? .2f : -.2f);      // 有箭头时提示放到上面，不挡箭头
+                var want = c.position + f * HintDist + Vector3.up * HintLift;
                 hintPos = Vector3.Lerp(hintPos, want, 1 - Mathf.Exp(-dt * 1.8f));
                 hint.transform.position = hintPos; hint.transform.rotation = Quaternion.LookRotation(hintPos - c.position);
                 if (hintT <= 0) hint.Hide();
@@ -588,5 +589,6 @@ namespace DLD.Play
             hint.Tick(dt);
         }
         float HintDist => hintBig ? 2.1f : 1.5f;
+        float HintLift => hintBig ? .02f : root.game?.tut?.Target != null ? .2f : 0f;      // 教学有地上箭头时提示再抬高一点，不挡箭头
     }
 }
