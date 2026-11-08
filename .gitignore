@@ -1,0 +1,33 @@
+# Unity 生成的目录
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Bb]uild/
+/[Bb]uilds/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+
+# 签名文件和密码，绝不上传
+/Keystore/
+*.keystore
+*.jks
+
+# 安装包
+*.apk
+*.aab
+
+# 其他
+.DS_Store
+__pycache__/
+*.pyc

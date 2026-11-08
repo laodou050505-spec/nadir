@@ -1,0 +1,20 @@
+{
+  "name": "medcart",
+  "faces": 36810,
+  "verts": 18741,
+  "size": [
+    0.679,
+    0.945,
+    1.0
+  ],
+  "islands": 36,
+  "debris": 0,
+  "floating_islands": 0,
+  "holes": 82,
+  "big_holes": 54,
+  "boundary_edges": 984,
+  "nonmanifold_edges": 195,
+  "self_intersections": 4838,
+  "thin_plates": 4,
+  "largest_island_share": 0.086
+}

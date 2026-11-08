@@ -1,0 +1,20 @@
+{
+  "name": "wheelchair",
+  "faces": 34127,
+  "verts": 17282,
+  "size": [
+    1.0,
+    0.635,
+    0.932
+  ],
+  "islands": 42,
+  "debris": 0,
+  "floating_islands": 0,
+  "holes": 40,
+  "big_holes": 26,
+  "boundary_edges": 517,
+  "nonmanifold_edges": 0,
+  "self_intersections": 3603,
+  "thin_plates": 0,
+  "largest_island_share": 0.365
+}

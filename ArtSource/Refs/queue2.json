@@ -1,0 +1,16 @@
+[
+ {
+  "name": "figure/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Strictly frontal full body view of an unnaturally tall and very thin faceless humanoid figure standing perfectly stiff and symmetrical, facing the camera. Abnormally long thin arms hanging straight down, slightly apart from the body, hands reaching below the knees with long fingers. Very long neck, small smooth egg-shaped head with absolutely no eyes, no nose, no mouth. Wears a plain sleeveless knee-length pale grey-blue hospital gown. Smooth matte pale mannequin surfaces, long thin legs, smooth feet together. Uncanny and quiet, clean and dry. Entire figure visible, plain flat light grey studio background, soft even lighting, no shadow, no text."
+ },
+ {
+  "name": "../Textures/door_wood",
+  "model": "banana2",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Medium brown wood veneer door surface, vertical straight grain, satin varnish, subtle variation. Top-down orthographic flat seamless material photograph, even diffuse lighting, no shadows, no perspective, no objects, no text. Clean and dry. No knots, no stains. Fills the entire frame."
+ }
+]

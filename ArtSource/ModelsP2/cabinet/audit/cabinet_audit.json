@@ -1,0 +1,20 @@
+{
+  "name": "cabinet",
+  "faces": 32547,
+  "verts": 17148,
+  "size": [
+    0.257,
+    0.548,
+    1.0
+  ],
+  "islands": 110,
+  "debris": 4,
+  "floating_islands": 0,
+  "holes": 166,
+  "big_holes": 34,
+  "boundary_edges": 2636,
+  "nonmanifold_edges": 781,
+  "self_intersections": 15628,
+  "thin_plates": 9,
+  "largest_island_share": 0.137
+}

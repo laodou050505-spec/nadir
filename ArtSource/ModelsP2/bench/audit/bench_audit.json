@@ -1,0 +1,20 @@
+{
+  "name": "bench",
+  "faces": 28030,
+  "verts": 14336,
+  "size": [
+    0.354,
+    1.0,
+    0.505
+  ],
+  "islands": 38,
+  "debris": 0,
+  "floating_islands": 0,
+  "holes": 35,
+  "big_holes": 19,
+  "boundary_edges": 588,
+  "nonmanifold_edges": 0,
+  "self_intersections": 4177,
+  "thin_plates": 0,
+  "largest_island_share": 0.144
+}

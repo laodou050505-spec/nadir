@@ -1,0 +1,20 @@
+{
+  "name": "figure",
+  "faces": 34963,
+  "verts": 17626,
+  "size": [
+    0.195,
+    0.239,
+    1.0
+  ],
+  "islands": 2,
+  "debris": 0,
+  "floating_islands": 0,
+  "holes": 39,
+  "big_holes": 5,
+  "boundary_edges": 416,
+  "nonmanifold_edges": 102,
+  "self_intersections": 314,
+  "thin_plates": 0,
+  "largest_island_share": 0.632
+}

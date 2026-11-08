@@ -1,0 +1,23 @@
+[
+ {
+  "name": "c1_shaft",
+  "model": "banana_pro",
+  "aspect": "16:9",
+  "size": "2K",
+  "prompt": "View looking straight down from the broken floor of an abandoned hospital corridor into an impossibly deep square vertical shaft. Square floor tiles have fallen away leaving a square hole. Below, dozens of identical concrete floor levels recede to a single vanishing point, each level ringed by small dim emergency lamps, thick pipes and cable trays running down the walls, a steel maintenance ladder, the very bottom lost in pitch black. Extreme vertigo, huge depth. Photorealistic cinematic still, Unreal Engine quality, clean and dry surfaces, cold desaturated blue-green palette with a few warm dying lights, deep black shadows, thin dust haze, silent and oppressive. No people, no blood, no mold, no moss, no rust, no stains, no debris, no text, no signs."
+ },
+ {
+  "name": "c2_corridor",
+  "model": "banana_pro",
+  "aspect": "16:9",
+  "size": "2K",
+  "prompt": "Wide empty corridor of an abandoned 1970s hospital at night, viewed at eye level. Pale green painted walls above a dark teal tiled dado with a steel handrail, closed heavy ward doors with small dark wired-glass windows, polished worn terrazzo floor reflecting light, recessed ceiling panels with mostly dead fluorescent tubes and one dim one, an empty wheelchair standing alone far down the corridor which disappears into blackness. Photorealistic cinematic still, Unreal Engine quality, clean and dry surfaces, cold desaturated blue-green palette with a few warm dying lights, deep black shadows, thin dust haze, silent and oppressive. No people, no blood, no mold, no moss, no rust, no stains, no debris, no text, no signs."
+ },
+ {
+  "name": "c3_broken",
+  "model": "banana_pro",
+  "aspect": "16:9",
+  "size": "2K",
+  "prompt": "Corridor intersection of an abandoned hospital at night. In the middle of the terrazzo floor a large grid of square floor slabs is breaking apart, several slabs missing revealing an endlessly deep black shaft lit by faint rings of lamps far below. Tall thin faceless pale figures in plain hospital gowns stand motionless in the darkness at the end of each corridor facing the camera. Photorealistic cinematic still, Unreal Engine quality, clean and dry surfaces, cold desaturated blue-green palette with a few warm dying lights, deep black shadows, thin dust haze, silent and oppressive. No people, no blood, no mold, no moss, no rust, no stains, no debris, no text, no signs."
+ }
+]

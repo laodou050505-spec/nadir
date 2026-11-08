@@ -1,0 +1,86 @@
+[
+ {
+  "name": "wheelchair/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Old 1970s hospital wheelchair, dull chrome tubular frame, dark grey vinyl seat and backrest, big wheels with solid chunky tyres and thick spokes, small front castors, footrests. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick proportions, opaque materials."
+ },
+ {
+  "name": "gurney/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Old hospital gurney stretcher on a metal frame with four castors, thin plain mattress with a folded pale sheet, low side rails, painted grey-green steel. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick proportions, opaque materials."
+ },
+ {
+  "name": "medcart/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Old hospital medicine cart on castors, enamel painted pale green steel with four drawers and a push handle, rounded corners, chunky. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick proportions, opaque materials."
+ },
+ {
+  "name": "bench/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Row of three connected old hospital waiting room chairs on one steel beam, moulded dark teal plastic seats and backs, chrome legs. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick proportions, opaque materials."
+ },
+ {
+  "name": "nursedesk/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Old hospital nurse station reception counter, long curved solid desk with a pale laminate top and teal panelled front, simple and heavy. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick proportions, opaque materials."
+ },
+ {
+  "name": "screen/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Old hospital folding privacy ward screen with three panels, pale green fabric stretched on a tubular steel frame on small castors, thick frame. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick proportions, opaque materials."
+ },
+ {
+  "name": "ivstand/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Hospital IV drip stand, single steel pole with two curved hooks at the top and a five-leg wheeled base, thick chunky pole, an empty clear drip bag hanging from a hook. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick proportions, opaque materials."
+ },
+ {
+  "name": "cabinet/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Old tall hospital storage cabinet, enamel painted pale grey-green steel with two glass-fronted doors in the upper half and solid doors below, empty shelves, chunky. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick proportions, opaque materials."
+ },
+ {
+  "name": "warddoor/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Heavy old hospital double swing door set in a thick steel frame, pale green painted leaves with a small rectangular dark wired-glass window in each, steel push plates, closed. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick proportions, opaque materials."
+ },
+ {
+  "name": "figure/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Unnaturally tall thin faceless humanoid figure standing perfectly straight facing forward, arms hanging a little apart from the body and reaching past the knees, smooth blank head with absolutely no eyes nose or mouth, wearing a plain knee-length pale grey-blue hospital gown, smooth matte pale surfaces like a mannequin, bare smooth feet together. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick proportions, opaque materials."
+ },
+ {
+  "name": "hand/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Long pale slender human forearm and open hand reaching forward, five very long thin spread fingers, smooth matte plaster mannequin surface with no skin detail, no nails, arm ends in a clean flat cut below the elbow. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick proportions, opaque materials."
+ },
+ {
+  "name": "climber/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Long-limbed thin faceless pale humanoid crouching on all fours like a spider, knees and elbows bent high, smooth blank head with no face, smooth matte plaster mannequin surface, no clothing details, featureless body. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick proportions, opaque materials."
+ }
+]

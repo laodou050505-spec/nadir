@@ -1,0 +1,41 @@
+{
+ "wheelchair": {
+  "faces": 34000
+ },
+ "gurney": {
+  "faces": 36000
+ },
+ "medcart": {
+  "faces": 24000
+ },
+ "bench": {
+  "faces": 28000
+ },
+ "nursedesk": {
+  "faces": 24000,
+  "voxel": 0.0027
+ },
+ "screen": {
+  "faces": 24000
+ },
+ "ivstand": {
+  "faces": 20000
+ },
+ "cabinet": {
+  "faces": 22000,
+  "voxel": 0.0024
+ },
+ "warddoor": {
+  "faces": 22000,
+  "voxel": 0.0024
+ },
+ "figure": {
+  "faces": 40000
+ },
+ "hand": {
+  "faces": 30000
+ },
+ "climber": {
+  "faces": 36000
+ }
+}

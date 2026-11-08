@@ -1,0 +1,20 @@
+{
+  "name": "warddoor",
+  "faces": 40395,
+  "verts": 19997,
+  "size": [
+    0.163,
+    0.894,
+    1.0
+  ],
+  "islands": 36,
+  "debris": 2,
+  "floating_islands": 0,
+  "holes": 200,
+  "big_holes": 25,
+  "boundary_edges": 1125,
+  "nonmanifold_edges": 1235,
+  "self_intersections": 4437,
+  "thin_plates": 0,
+  "largest_island_share": 0.088
+}

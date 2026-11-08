@@ -1,0 +1,20 @@
+{
+  "name": "ivstand",
+  "faces": 33910,
+  "verts": 16744,
+  "size": [
+    0.419,
+    0.435,
+    1.0
+  ],
+  "islands": 20,
+  "debris": 0,
+  "floating_islands": 0,
+  "holes": 34,
+  "big_holes": 6,
+  "boundary_edges": 247,
+  "nonmanifold_edges": 557,
+  "self_intersections": 1409,
+  "thin_plates": 0,
+  "largest_island_share": 0.294
+}

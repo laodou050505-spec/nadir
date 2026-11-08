@@ -1,0 +1,16 @@
+[
+ {
+  "name": "wheelchair/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Old hospital wheelchair with thick tubular dull chrome frame, thick padded solid dark grey vinyl seat cushion and thick padded backrest, big wheels with solid moulded grey plastic five-spoke mag rims with wide flat spokes and chunky solid tyres, no wire spokes, small solid front castors, solid wide footrest plates. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick chunky proportions, opaque materials, no thin wires."
+ },
+ {
+  "name": "screen/image",
+  "model": "banana_pro",
+  "aspect": "1:1",
+  "size": "2K",
+  "prompt": "Old hospital folding privacy screen made of three thick solid rigid padded panels covered in pale green vinyl, each panel 6 centimetres thick with a chunky painted steel edge frame, hinged together in a gentle zigzag, standing on short thick legs with small castors, nothing else. Single complete object centered, entire object visible, three-quarter front view, plain flat light grey studio background, soft even lighting, no shadow on the ground, no other objects, no text, no logos. Photorealistic product reference, clean and dry, solid thick chunky proportions, opaque materials, no thin wires."
+ }
+]

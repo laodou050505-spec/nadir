@@ -1,0 +1,12 @@
+{
+  "faces": 21600,
+  "boundary": 0,
+  "nonmanifold": 0,
+  "zero": 0,
+  "flipped": 0,
+  "islands_remesh": 4,
+  "killed": 18,
+  "voxel": 0.0022,
+  "faces_remesh": 1747420,
+  "pass": true
+}

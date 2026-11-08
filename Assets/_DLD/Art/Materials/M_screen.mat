@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_screen
+  m_Shader: {fileID: 4800000, guid: 84636a7b7e678436ca959130318db21e, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: bf22a23e8f14d4a78b1d936a21b85a6c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CrackMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: e108a89d30b9b49cb895b1f90469a1cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: eb9c760088e58440fa9fc0259ed25048, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AntiTile: 0
+    - _Cavity: 0.5
+    - _CeilRefl: 0
+    - _CrackK: 0
+    - _Cull: 2
+    - _DepthFade: 0
+    - _EmissLevel: 0
+    - _FogK: 1
+    - _Gloss: 0.15
+    - _Grid: 0
+    - _GridOff: 0.5
+    - _GridSize: 0.75
+    - _Grime: 0.8
+    - _LevelResponse: 1
+    - _NormalScale: 1
+    - _RimK: 0
+    - _Rough: 0.35
+    - _SeepK: 0
+    - _StencilComp: 8
+    - _StencilRef: 0
+    - _UV2Scale: 0.73
+    - _WearK: 0.75
+    m_Colors:
+    - _BaseColor: {r: 0.62, g: 0.66, b: 0.64, a: 1}
+    - _CrackCol: {r: 0.7, g: 0.9, b: 0.85, a: 1}
+    - _CrackRect: {r: 0, g: 0, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MinLight: {r: 0, g: 0, b: 0, a: 0}
+    - _UV2Off: {r: 0.37, g: 0.61, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

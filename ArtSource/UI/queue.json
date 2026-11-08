@@ -1,0 +1,86 @@
+[
+ {
+  "name": "h_step",
+  "model": "banana2",
+  "aspect": "1:1",
+  "size": "1K",
+  "prompt": "Straight-on flat scan of one old enamel hospital sign plate, fills the entire image edge to edge with no background and no perspective. Pale cream enamel with a thin dull teal border line. Worn, faded, light scratches, slightly chipped corners, clean, no rust stains. Evenly lit. Absolutely no letters, no words, no numbers. In the exact center, large, one simple solid black pictogram in the international safety-sign style: a walking person stepping off a square floor tile that has a jagged crack in it, arrow pointing away from the crack."
+ },
+ {
+  "name": "h_gaze",
+  "model": "banana2",
+  "aspect": "1:1",
+  "size": "1K",
+  "prompt": "Straight-on flat scan of one old enamel hospital sign plate, fills the entire image edge to edge with no background and no perspective. Pale cream enamel with a thin dull teal border line. Worn, faded, light scratches, slightly chipped corners, clean, no rust stains. Evenly lit. Absolutely no letters, no words, no numbers. In the exact center, large, one simple solid black pictogram in the international safety-sign style: a single human eye above a hand whose thumb and index finger are pinching together."
+ },
+ {
+  "name": "h_over",
+  "model": "banana2",
+  "aspect": "1:1",
+  "size": "1K",
+  "prompt": "Straight-on flat scan of one old enamel hospital sign plate, fills the entire image edge to edge with no background and no perspective. Pale cream enamel with a thin dull teal border line. Worn, faded, light scratches, slightly chipped corners, clean, no rust stains. Evenly lit. Absolutely no letters, no words, no numbers. In the exact center, large, one simple solid black pictogram in the international safety-sign style: a single foot taking a long step across a square gap in the floor."
+ },
+ {
+  "name": "h_swat",
+  "model": "banana2",
+  "aspect": "1:1",
+  "size": "1K",
+  "prompt": "Straight-on flat scan of one old enamel hospital sign plate, fills the entire image edge to edge with no background and no perspective. Pale cream enamel with a thin dull teal border line. Worn, faded, light scratches, slightly chipped corners, clean, no rust stains. Evenly lit. Absolutely no letters, no words, no numbers. In the exact center, large, one simple solid black pictogram in the international safety-sign style: an open hand swinging sideways with three curved motion lines behind it."
+ },
+ {
+  "name": "h_push",
+  "model": "banana2",
+  "aspect": "1:1",
+  "size": "1K",
+  "prompt": "Straight-on flat scan of one old enamel hospital sign plate, fills the entire image edge to edge with no background and no perspective. Pale cream enamel with a thin dull teal border line. Worn, faded, light scratches, slightly chipped corners, clean, no rust stains. Evenly lit. Absolutely no letters, no words, no numbers. In the exact center, large, one simple solid black pictogram in the international safety-sign style: an open palm facing forward with the fingers up, pushing, with three short straight lines in front of the palm."
+ },
+ {
+  "name": "h_eye",
+  "model": "banana2",
+  "aspect": "1:1",
+  "size": "1K",
+  "prompt": "Straight-on flat scan of one old enamel hospital sign plate, fills the entire image edge to edge with no background and no perspective. Pale cream enamel with a thin dull teal border line. Worn, faded, light scratches, slightly chipped corners, clean, no rust stains. Evenly lit. Absolutely no letters, no words, no numbers. In the exact center, large, one simple solid black pictogram in the international safety-sign style: an open eye looking downward, crossed out by one thick diagonal line."
+ },
+ {
+  "name": "h_tear",
+  "model": "banana2",
+  "aspect": "1:1",
+  "size": "1K",
+  "prompt": "Straight-on flat scan of one old enamel hospital sign plate, fills the entire image edge to edge with no background and no perspective. Pale cream enamel with a thin dull teal border line. Worn, faded, light scratches, slightly chipped corners, clean, no rust stains. Evenly lit. Absolutely no letters, no words, no numbers. In the exact center, large, one simple solid black pictogram in the international safety-sign style: two hands side by side, each pinching with thumb and index finger, pulling apart a thin vertical jagged crack between them, with one small arrow pointing outward from each hand."
+ },
+ {
+  "name": "h_move",
+  "model": "banana2",
+  "aspect": "1:1",
+  "size": "1K",
+  "prompt": "Straight-on flat scan of one old enamel hospital sign plate, fills the entire image edge to edge with no background and no perspective. Pale cream enamel with a thin dull teal border line. Worn, faded, light scratches, slightly chipped corners, clean, no rust stains. Evenly lit. Absolutely no letters, no words, no numbers. In the exact center, large, one simple solid black pictogram in the international safety-sign style: a walking person with one arrow pointing forward, standing on a floor tile."
+ },
+ {
+  "name": "s_space",
+  "model": "banana2",
+  "aspect": "1:1",
+  "size": "1K",
+  "prompt": "Straight-on flat scan of one old enamel hospital sign plate, fills the entire image edge to edge with no background and no perspective. Pale cream enamel with a thin dull teal border line. Worn, faded, light scratches, slightly chipped corners, clean, no rust stains. Evenly lit. Absolutely no letters, no words, no numbers. In the exact center, large, one simple solid black pictogram in the international safety-sign style: a standing person in the middle of an empty square floor area, four arrows pointing outward from the person to the corners."
+ },
+ {
+  "name": "s_dizzy",
+  "model": "banana2",
+  "aspect": "1:1",
+  "size": "1K",
+  "prompt": "Straight-on flat scan of one old enamel hospital sign plate, fills the entire image edge to edge with no background and no perspective. Pale cream enamel with a thin dull teal border line. Worn, faded, light scratches, slightly chipped corners, clean, no rust stains. Evenly lit. Absolutely no letters, no words, no numbers. In the exact center, large, one simple solid black pictogram in the international safety-sign style: a human head in side profile with one spiral above it."
+ },
+ {
+  "name": "s_warn",
+  "model": "banana2",
+  "aspect": "1:1",
+  "size": "1K",
+  "prompt": "Straight-on flat scan of one old enamel hospital sign plate, fills the entire image edge to edge with no background and no perspective. Pale cream enamel with a thin dull teal border line. Worn, faded, light scratches, slightly chipped corners, clean, no rust stains. Evenly lit. Absolutely no letters, no words, no numbers. In the exact center, large, one simple solid black pictogram in the international safety-sign style: a triangle with one exclamation mark inside it."
+ },
+ {
+  "name": "panel",
+  "model": "banana2",
+  "aspect": "2:3",
+  "size": "2K",
+  "prompt": "Straight-on flat scan of an empty old hospital elevator control panel faceplate, one tall rectangular plate of brushed dark steel with a thin bevelled edge and four small slotted screws in the corners, fills the entire image edge to edge, no background, no perspective. Worn, fine horizontal brushing, soft finger-rub patina in the middle, faint scratches, dry and clean, no rust stains. No buttons, no holes, no letters, no numbers, no text. Evenly lit."
+ }
+]

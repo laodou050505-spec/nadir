@@ -1,0 +1,38 @@
+{
+ "pass": true,
+ "repair": {
+  "faces": 23990,
+  "boundary": 0,
+  "nonmanifold": 0,
+  "zero": 0,
+  "flipped": 0,
+  "islands_remesh": 5,
+  "killed": 24,
+  "voxel": 0.0022,
+  "faces_remesh": 322110,
+  "pass": true
+ },
+ "lods": {
+  "lod0": {
+   "faces": 23990,
+   "boundary": 0,
+   "nonmanifold": 0
+  },
+  "lod1": {
+   "faces": 9596,
+   "boundary": 0,
+   "nonmanifold": 0
+  },
+  "lod2": {
+   "faces": 3598,
+   "boundary": 0,
+   "nonmanifold": 0
+  },
+  "lod3": {
+   "faces": 1198,
+   "boundary": 0,
+   "nonmanifold": 0
+  }
+ },
+ "texture": "2048x2048 sharp=149.16"
+}

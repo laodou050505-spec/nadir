@@ -1,0 +1,20 @@
+{
+  "name": "gurney",
+  "faces": 35423,
+  "verts": 18549,
+  "size": [
+    0.999,
+    1.0,
+    0.555
+  ],
+  "islands": 74,
+  "debris": 6,
+  "floating_islands": 0,
+  "holes": 150,
+  "big_holes": 53,
+  "boundary_edges": 2341,
+  "nonmanifold_edges": 468,
+  "self_intersections": 13491,
+  "thin_plates": 6,
+  "largest_island_share": 0.199
+}

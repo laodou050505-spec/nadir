@@ -1,0 +1,20 @@
+{
+  "name": "screen",
+  "faces": 40344,
+  "verts": 20515,
+  "size": [
+    0.403,
+    0.84,
+    1.0
+  ],
+  "islands": 49,
+  "debris": 0,
+  "floating_islands": 0,
+  "holes": 161,
+  "big_holes": 35,
+  "boundary_edges": 1668,
+  "nonmanifold_edges": 735,
+  "self_intersections": 6885,
+  "thin_plates": 4,
+  "largest_island_share": 0.073
+}
