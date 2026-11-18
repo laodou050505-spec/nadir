@@ -85,8 +85,12 @@ namespace DLD.EditorTools
         {
             var src = Path.Combine(P2Src, name, "final");
             var rep = Path.Combine(src, "report.json");
-            if (!File.Exists(Path.Combine(src, "lod0.fbx")) || !File.Exists(rep) || !File.ReadAllText(rep).Contains("\"pass\": true")) return null;
             var dst = $"{P2Dst}/{name}";
+            // 成品模型和贴图只在工程里留一份（Art/Models/P2/<名称>）；美术源目录的 final/ 里有更新的才拷过来。
+            // 所以“源目录里没有 lod0.fbx”不算没就绪 —— 只要工程里那份在、审计报告合格就能用。
+            // （11-08 清理重复文件时删了源目录那份，这里原来只认源目录，结果之后重建的场景里道具全被跳过）
+            bool ready = File.Exists(Path.Combine(src, "lod0.fbx")) || File.Exists($"{dst}/lod0.fbx");
+            if (!ready || !File.Exists(rep) || !File.ReadAllText(rep).Contains("\"pass\": true")) return null;
             Directory.CreateDirectory(dst);
             bool changed = false;
             foreach (var f in new[] { "lod0.fbx", "lod1.fbx", "lod2.fbx", "albedo.png", "albedo_n.png", "albedo_m.png" })

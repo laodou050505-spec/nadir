@@ -516,7 +516,7 @@ namespace DLD.EditorTools
             void P(string name, float height, float x, float z, float yaw, float gloss = .15f)
             {
                 var pf = DLDArt.ImportP2(name, height, gloss);
-                if (!pf) { Debug.LogWarning("道具未就绪 " + name); return; }
+                if (!pf) { Debug.LogError("道具未就绪 " + name + "：场景里会缺这件道具"); return; }
                 var go = (GameObject)PrefabUtility.InstantiatePrefab(pf, root);
                 go.transform.SetLocalPositionAndRotation(new Vector3(x, 0, z), Quaternion.Euler(0, yaw, 0));
                 if (name == "ivstand") IvPole(go.transform);

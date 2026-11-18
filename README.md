@@ -15,7 +15,7 @@ PICO 头显上的混合现实（MR）恐怖游戏，全程只用双手和眼睛�
 
 > 透视模式的截图是在电脑上把游戏画面（带透明度）合成到一张示例房间照片上，模拟头显里看到的效果；真机上背景是玩家自己的房间。
 
-**安装包**：[Releases](https://github.com/laodou050505-spec/nadir/releases) 里有可以直接装到 PICO 头显上的 APK（约 158MB），安装方法写在发布说明里。
+**安装包**：[Releases](https://github.com/laodou050505-spec/nadir/releases) 里有可以直接装到 PICO 头显上的 APK（约 205MB），安装方法写在发布说明里。
 
 ## 玩法
 
@@ -118,4 +118,5 @@ PICO SDK 在 `Packages/manifest.json` 里用的是本机路径：
 - **音效、环境声、配乐**：全部由本项目的脚本离线合成（`Tools/make_sfx.py`、`make_amb.py`、`make_music.py`），不含第三方音频。
 - **字体**：Noto Sans SC / Noto Serif SC、Long Cang、Covered By Your Grace，均为 SIL OFL 1.1，授权文本在 `ArtSource/Fonts/`。
 - **贴图和模型**：由 Tripo 生成后经本项目脚本处理。
+- **公司标志**：启动画面和标题页上的 TRIPO 标志是 Tripo 的商标，只用于出品署名，不属于开源素材。
 - 详见 [素材来源](Docs/素材来源.md)。
