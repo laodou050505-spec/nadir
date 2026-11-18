@@ -5,7 +5,7 @@ namespace DLD.Play
     /// <summary>界面上的一个可见元素：入场时从模糊里聚焦、轻轻浮起，退场时溶回去。所有动画都走这里</summary>
     public class UIItem : MonoBehaviour
     {
-        public MeshRenderer r; public Vector3 home; public float delay, dur = .9f; public int sweep; public float shadow = .6f; public bool rgb;
+        public MeshRenderer r; public Vector3 home; public float delay, dur = .9f; public int sweep; public float shadow = .6f; public bool rgb, plain;      // rgb：贴图自带颜色（做旧金属，有扫光）；plain：贴图原样显示，什么都不加
         [HideInInspector] public Color tint = new Color(.86f, .84f, .78f, 1), glow = Color.clear;
         [HideInInspector] public float revealMul = 1; [HideInInspector] public Vector3 offset;
         float k, wait; bool on; MaterialPropertyBlock mpb;
@@ -26,7 +26,7 @@ namespace DLD.Play
             if (!r.enabled) return;
             mpb ??= new MaterialPropertyBlock();
             r.GetPropertyBlock(mpb);
-            mpb.SetFloat(Reveal, e * revealMul); mpb.SetColor(Tint, tint); mpb.SetColor(Glow, glow); mpb.SetFloat(Sweep, sweep); mpb.SetFloat(Shadow, shadow); mpb.SetFloat(UseRgb, rgb ? 1 : 0);
+            mpb.SetFloat(Reveal, e * revealMul); mpb.SetColor(Tint, tint); mpb.SetColor(Glow, glow); mpb.SetFloat(Sweep, sweep); mpb.SetFloat(Shadow, shadow); mpb.SetFloat(UseRgb, plain ? 2 : rgb ? 1 : 0);
             r.SetPropertyBlock(mpb);
         }
     }

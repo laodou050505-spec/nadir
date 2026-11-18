@@ -49,12 +49,41 @@ namespace DLD.EditorTools
             }
         }
 
+        /// <summary>启动画面：去掉 Made with Unity，换成排版一样的 MADE WITH TRIPO（左边两行小号大写字 MADE / WITH，右边官方 TRIPO 标志，横排）。
+        /// 仍然用 Unity 自带的启动画面（位置、大小、淡入淡出、深色背景都是同一套），只是关掉 Unity 标志、换成 Art/Brand/made_with_tripo.png（透明底）。
+        /// 头显（XR）里 Unity 不画这个“标志列表”，只显示 Virtual Reality Splash Image 这一张贴图，所以把头显专用的那张
+        /// （made_with_tripo_vr.png，不透明深色底、内容居中）也填进去。两处缺一不可。每次打包都会执行（Apply 里调用）；图不在时保持原样并给出警告</summary>
+        public static void ApplySplash()
+        {
+            string dir = DLDArt.P2Dst.Substring(0, DLDArt.P2Dst.IndexOf("/Art/")) + "/Art/Brand/", path = dir + "made_with_tripo.png", vrPath = dir + "made_with_tripo_vr.png";
+            var ti = AssetImporter.GetAtPath(path) as TextureImporter;
+            if (ti == null) { Debug.LogWarning("[NADIR] 没找到启动画面图 " + path + "，启动画面保持原样"); return; }
+            if (ti.textureType != TextureImporterType.Sprite || ti.mipmapEnabled || ti.textureCompression != TextureImporterCompression.Uncompressed)
+            { ti.textureType = TextureImporterType.Sprite; ti.spriteImportMode = SpriteImportMode.Single; ti.mipmapEnabled = false; ti.textureCompression = TextureImporterCompression.Uncompressed; ti.alphaIsTransparency = true; ti.SaveAndReimport(); }
+            var sp = AssetDatabase.LoadAssetAtPath<Sprite>(path);
+            if (!sp) { Debug.LogWarning("[NADIR] 启动画面图导入失败 " + path); return; }
+            PlayerSettings.SplashScreen.show = true;
+            PlayerSettings.SplashScreen.showUnityLogo = false;
+            PlayerSettings.SplashScreen.backgroundColor = new Color(35 / 255f, 31 / 255f, 32 / 255f, 1);      // 和头显那张图的底色一致
+            PlayerSettings.SplashScreen.logos = new[] { PlayerSettings.SplashScreenLogo.Create(2f, sp) };
+            var vi = AssetImporter.GetAtPath(vrPath) as TextureImporter;
+            if (vi == null) { Debug.LogWarning("[NADIR] 没找到头显启动图 " + vrPath); return; }
+            if (vi.textureType != TextureImporterType.Default || vi.mipmapEnabled || vi.textureCompression != TextureImporterCompression.Uncompressed || vi.npotScale != TextureImporterNPOTScale.None)
+            { vi.textureType = TextureImporterType.Default; vi.mipmapEnabled = false; vi.textureCompression = TextureImporterCompression.Uncompressed; vi.npotScale = TextureImporterNPOTScale.None; vi.wrapMode = TextureWrapMode.Clamp; vi.sRGBTexture = true; vi.SaveAndReimport(); }
+            var vt = AssetDatabase.LoadAssetAtPath<Texture2D>(vrPath);
+            var ps = Unsupported.GetSerializedAssetInterfaceSingleton("PlayerSettings");
+            if (!vt || !ps) { Debug.LogWarning("[NADIR] 头显启动图没设上"); return; }
+            var so = new SerializedObject(ps); var prop = so.FindProperty("m_VirtualRealitySplashScreen");
+            if (prop == null) { Debug.LogWarning("[NADIR] 这个版本的 Unity 没有 m_VirtualRealitySplashScreen"); return; }
+            if (prop.objectReferenceValue != vt) { prop.objectReferenceValue = vt; so.ApplyModifiedPropertiesWithoutUndo(); AssetDatabase.SaveAssets(); }
+        }
+
         static void Apply()
         {
             UISizes.Bake();
             var t = NamedBuildTarget.Android;
             Pico(); Icons();
-            PlayerSettings.SplashScreen.show = false;      // 封面启动画面之后不再插 Unity 的 Logo
+            ApplySplash();
             PlayerSettings.SetApplicationIdentifier(t, PackageId);
             PlayerSettings.productName = ProductName; PlayerSettings.companyName = "toybox";
             // 版本号按打包时间生成（2026-01-01 起的分钟数）：工程设置被同步覆盖也只增不减，头显不会拒装成“降级”

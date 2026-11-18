@@ -125,6 +125,7 @@ namespace DLD.EditorTools
             return n;
         }
 
+        const float CreditY = -.258f, CreditScale = .55f;
         static int padSeed;
         /// <summary>按钮 = 背光胶片 + 蜡笔字 + 选中时手画的圈。每张都有一点歪，不是对齐排出来的</summary>
         static UIButton Pad(Transform p, string name, string zh, string en, string kind, Vector3 pos, Vector2 size, float delay, Color? col = null, bool variants = true)
@@ -202,6 +203,11 @@ namespace DLD.EditorTools
             f.langBtn = Pad(pm, "Lang", "lang_zh", "lang_en", "btn", new Vector3(-.1565f, -.09f, 0), new Vector2(.293f, .13f), 3.1f);
             f.lessonBtn = Pad(pm, "Lesson", "b_lesson", "btn", new Vector3(0, -.09f, 0), new Vector2(.293f, .13f), 3.2f);
             f.quitBtn = Pad(pm, "Quit", "b_quit", "btn", new Vector3(.1565f, -.09f, 0), new Vector2(.293f, .13f), 3.3f);
+            // 出品署名：手边面板最下面的一行页脚，和上面三个按钮同一条中轴线居中。官方 TRIPO 标志在前、手写字在后（一张合成图，make_ui.py 的 credit），
+            // 原样显示：不染色、不加暗影和光晕。比按钮上的字小，离按钮下沿留出两个标志高的空；按钮都出来之后才显出来。只在标题页（选难度那一页没有）
+            // 后面垫一块柔和的暗底（和收集进度栏背后那块同一种做法）：简单模式是直接叠在真实房间上的，地板颜色浅时白色标志也看得清；暗底只是背景，标志本身不加任何效果
+            Shape(pm, "CreditBack", "veil", new Vector3(0, CreditY, .012f), new Vector2(.84f, .17f), 3.5f, 0, new Color(0, 0, 0, .62f), 1.0f, 0, 1);
+            var credit = Q(pm, "Credit", "credit_zh", "credit_en", new Vector3(0, CreditY, 0), 3.6f, 0, CreditScale, Color.white, 0, 1.2f, 0); credit.plain = true;
 
             // 开始之后才选：难度、范围，走过的话还有楼层
             f.pageOpts = Screen<UIScreen>(f.nearMenu, "Opts"); var po = f.pageOpts.transform;

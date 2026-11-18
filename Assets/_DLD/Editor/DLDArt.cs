@@ -24,6 +24,7 @@ namespace DLD.EditorTools
         void OnPreprocessTexture()
         {
             if (!assetPath.StartsWith("Assets/_DLD/Art")) return;
+            if (assetPath.Contains("/Art/Brand/")) return;      // 启动画面用的品牌图：导入设置由 DLDBuild.ApplySplash 管（不要 mipmap、不压缩）
             var ti = (TextureImporter)assetImporter;
             if (assetPath.EndsWith("_n.png")) ti.textureType = TextureImporterType.NormalMap;
             if (assetPath.EndsWith("_m.png")) ti.sRGBTexture = false;

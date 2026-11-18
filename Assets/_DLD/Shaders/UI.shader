@@ -10,7 +10,7 @@ Shader "DLD/UI"
         _Reveal ("显影", Range(0,1)) = 1
         _Sweep ("显影方向 0横向 1中心 2绕圈 3向下", Float) = 0
         _Shadow ("字后暗影", Range(0,1)) = 0
-        _UseRgb ("用贴图本身的颜色", Float) = 0
+        _UseRgb ("用贴图本身的颜色 1做旧金属 2原样显示", Float) = 0
         [Enum(UnityEngine.Rendering.CompareFunction)] _ZT ("深度比较", Float) = 4
     }
     SubShader
@@ -60,7 +60,8 @@ Shader "DLD/UI"
                 float halo = SAMPLE_TEXTURE2D_BIAS(_BaseMap, sampler_BaseMap, i.uv, 3.6).a * m;
                 float shade = saturate(halo * 2.4) * _Shadow;
                 half3 c = _Tint.rgb * a + _Glow.rgb * halo;
-                if (_UseRgb > .5)
+                if (_UseRgb > 1.5) c = tex.rgb * a;      // 原样显示：品牌标志这类不许改色的图，不染色、不加光晕、不加扫光
+                else if (_UseRgb > .5)
                 {
                     // 做旧的金属字：一道很慢的冷光扫过，只在字面的亮部起作用
                     float s = i.uv.x - i.uv.y * .28 - frac(_Time.y * .055) * 2.2 + .6;

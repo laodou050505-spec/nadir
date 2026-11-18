@@ -60,6 +60,8 @@ MonoBehaviour:
   - c_small_zh
   - cover_en
   - cover_zh
+  - credit_en
+  - credit_zh
   - end_l1_en
   - end_l1_zh
   - end_l2_en
@@ -275,6 +277,8 @@ MonoBehaviour:
   - {x: 1791, y: 121}
   - {x: 2048, y: 1152}
   - {x: 2048, y: 1152}
+  - {x: 1816, y: 240}
+  - {x: 1538, y: 240}
   - {x: 1221, y: 262}
   - {x: 935, y: 213}
   - {x: 1508, y: 171}

@@ -5,8 +5,10 @@ import site, sys, pathlib
 sys.path.append(site.getusersitepackages())
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 R = pathlib.Path(__file__).resolve().parents[1]; SRC = R/'ArtSource/UI'; DST = R/'Assets/_DLD/Art/UI'; DST.mkdir(parents=True, exist_ok=True)
-for old in DST.glob('*.png'): old.unlink()
-for old in DST.glob('*.png.meta'): old.unlink()
+ONLY = sys.argv[1:]      # 只重做名字以这些开头的图（例：make_ui.py credit）。不带参数 = 全部删掉重做
+if not ONLY:
+    for old in DST.glob('*.png'): old.unlink()
+    for old in DST.glob('*.png.meta'): old.unlink()
 SERIF = str(R/'ArtSource/Fonts/NotoSerifSC-SemiBold.otf'); SANS = str(R/'ArtSource/Fonts/NotoSansSC-Medium.otf')
 SS = 3   # 超采样，字边不糙
 
@@ -21,7 +23,9 @@ def text(txt, size, path=SERIF, track=0.):
     for c in txt: dr.text((x, pad), c, font=f, fill=255); x += f.getlength(c) + tr
     return white(m.resize((m.width//SS, m.height//SS), Image.LANCZOS))
 
-def save(im, name): im.save(DST/f'{name}.png')
+def save(im, name):
+    if ONLY and not any(name.startswith(o) for o in ONLY): return
+    im.save(DST/f'{name}.png')
 def pair(name, zh, en, size, path=SERIF, tz=.12, te=.14, se=None, pe=None):
     save(text(zh, size, path, tz), f'{name}_zh'); save(text(en, se or size, pe or path, te), f'{name}_en')
 
@@ -223,5 +227,26 @@ for y in range(s):
         r_ = (((x + .5)/s - .5)**2 + ((y + .5)/s - .5)**2)**.5*2; v = max(0, min(1, (1 - r_)/.62)); px[x, y] = int(255*v*v*(3 - 2*v))
 save(white(m), 'veil')
 # 开场封面：由 make_cover.py 合成的成品缩到 2K
-for t_ in ('zh', 'en'): Image.open(R/f'Docs/封面/NADIR_封面_16x9_{t_}.png').convert('RGBA').resize((2048, 1152), Image.LANCZOS).save(DST/f'cover_{t_}.png')
+if not ONLY:
+    for t_ in ('zh', 'en'): Image.open(R/f'Docs/封面/NADIR_封面_16x9_{t_}.png').convert('RGBA').resize((2048, 1152), Image.LANCZOS).save(DST/f'cover_{t_}.png')
+
+# 出品署名（标题页）：官方 TRIPO 标志在前，一行蜡笔手写字在后，合成一张图。
+# 标志用官方原图（深色底用白字版）：一个像素都不改 —— 不缩放、不改色、不加颗粒；它自带的四周留白也原样保留。
+# 字用标题页正文的蜡笔手写体，颜色直接画进贴图（和界面里次要文字同一个颜色），着色器用“原样显示”，不再染色。
+def credit(key, parts, gap=22):
+    """parts：[(文字, 字号, 是不是中文)]。拉丁字母用英文手写体、汉字用中文手写体（中文手写体里的拉丁字母太细太散）"""
+    logo = Image.open(R/'ArtSource/Brand/tripo_logo_h_800_white.png').convert('RGBA')      # 800×200，图形 + 字标占 x 54–746，字标占 y 55–144
+    edge = logo.width - logo.getbbox()[2]                                                      # 标志自带的右侧留白，左侧相同
+    gs = [np.asarray(hand(tx, sz, z, -.07 if z else .04))[..., 3] for tx, sz, z in parts]                     # 每段四周各有 TRIM 的透明边
+    join = -20                                                                                 # 两段之间：去掉重复的透明边，留一个词距
+    tw = sum(g.shape[1] for g in gs) + join*(len(gs) - 1)
+    W = logo.width + gap + tw + (edge - TRIM); H = max([logo.height] + [g.shape[0] for g in gs]) + 40      # 右边补到和左边一样宽：整块的视觉中心就是贴图中心
+    im = np.zeros((H, W, 4), np.uint8); im[..., :3] = (184, 176, 148)                           # 次要文字的颜色（PlayBuilder.Dim）
+    x = logo.width + gap
+    for g, (tx, sz, z) in zip(gs, parts):
+        y = (H - g.shape[0])//2 + (2 if z else 10)                                             # 拉丁字母有下伸的笔画，整体往下放一点，字身才和字标对齐
+        a = im[y:y + g.shape[0], x:x + g.shape[1], 3]; np.maximum(a, g, out=a); x += g.shape[1] + join
+    out = Image.fromarray(im); out.alpha_composite(logo, (0, (H - logo.height)//2))
+    save(out, key)
+credit('credit_zh', [('Tripo XR', 92, False), ('出品', 124, True)]); credit('credit_en', [('Tripo XR Developers', 92, False)])      # 字身高约为标志字标的四分之三：标志领头，字跟在后面
 print('ok', len(list(DST.glob('*.png'))))
